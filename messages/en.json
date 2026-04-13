@@ -1,0 +1,66 @@
+{
+  "seo": {
+    "title": "InterContinental Hanoi Westlake | Luxury Resort on West Lake",
+    "description": "An overwater luxury hotel in Hanoi with premium rooms, destination dining, and world-class event experiences."
+  },
+  "hero": {
+    "title": "A signature overwater luxury retreat in Hanoi",
+    "description": "This rebuilt experience preserves the original brand meaning while improving clarity, booking flow, and AI-first SEO architecture.",
+    "cta": "Book your stay"
+  },
+  "sections": {
+    "roomsTitle": "Featured Rooms & Suites",
+    "diningTitle": "Signature Dining"
+  },
+  "rooms": [
+    {
+      "name": "King Bed Classic Lake View",
+      "desc": "43 sqm with a private balcony and calming West Lake views—ideal for couples and business travelers."
+    },
+    {
+      "name": "Twin Bed Classic Overwater Lake View",
+      "desc": "Fully overwater design with quiet surroundings for deep relaxation and restorative stays."
+    },
+    {
+      "name": "1 King 1 Bedroom Suite Lake View",
+      "desc": "80–86 sqm suite with separate living space, crafted for elevated long-stay comfort."
+    }
+  ],
+  "dining": [
+    {
+      "name": "Sunset Bar",
+      "desc": "The hotel’s iconic overwater bar for sunset cocktails and romantic lakefront moments."
+    },
+    {
+      "name": "Café du Lac",
+      "desc": "French-inspired atmosphere with international selections for breakfast, lunch, and dinner."
+    },
+    {
+      "name": "Milan Restaurant",
+      "desc": "Classic Italian flavors served in a modern fine-dining format."
+    },
+    {
+      "name": "Saigon Restaurant",
+      "desc": "Contemporary Vietnamese cuisine featuring local ingredients and an open-kitchen experience."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How far is the hotel from central Hanoi?",
+      "a": "The hotel is located at 5 Tu Hoa Street, Tay Ho, only a short drive from Hanoi’s central districts."
+    },
+    {
+      "q": "Is the property suitable for weddings and business events?",
+      "a": "Yes. The resort offers dedicated wedding and meeting spaces with expert on-site event support."
+    },
+    {
+      "q": "How can I access the best available rates?",
+      "a": "Book directly on the website or call reservations for seasonal deals and exclusive packages."
+    }
+  ],
+  "cta": {
+    "title": "Ready for a premium stay on West Lake?",
+    "body": "Contact our reservations team for tailored room, dining, and event packages.",
+    "button": "Call +84 24 6270 8888"
+  }
+}

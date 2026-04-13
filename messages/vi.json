@@ -1,0 +1,66 @@
+{
+  "seo": {
+    "title": "InterContinental Hanoi Westlake | Khu nghỉ dưỡng sang trọng bên hồ",
+    "description": "Khách sạn nổi trên mặt hồ Tây với phòng nghỉ cao cấp, ẩm thực đặc sắc và trải nghiệm sự kiện đẳng cấp quốc tế."
+  },
+  "hero": {
+    "title": "Khách sạn nổi độc đáo giữa hồ Tây Hà Nội",
+    "description": "Giữ trọn tinh thần nguyên bản của InterContinental Hanoi Westlake, phiên bản mới tập trung vào trải nghiệm đặt phòng nhanh, nội dung rõ ràng và chuẩn SEO/AI Search.",
+    "cta": "Đặt phòng ngay"
+  },
+  "sections": {
+    "roomsTitle": "Phòng nghỉ & Suite nổi bật",
+    "diningTitle": "Ẩm thực đặc trưng"
+  },
+  "rooms": [
+    {
+      "name": "King Bed Classic Lake View",
+      "desc": "Phòng 43m² với ban công riêng, tầm nhìn hồ Tây thư thái, phù hợp cho kỳ nghỉ cặp đôi hoặc công tác."
+    },
+    {
+      "name": "Twin Bed Classic Overwater Lake View",
+      "desc": "Thiết kế nổi hoàn toàn trên mặt nước, không gian yên tĩnh, tối ưu cho du khách cần nghỉ dưỡng sâu."
+    },
+    {
+      "name": "1 King 1 Bedroom Suite Lake View",
+      "desc": "Suite 80–86m² với diện tích rộng, tách biệt khu sinh hoạt, nâng cấp trải nghiệm nghỉ dưỡng cao cấp."
+    }
+  ],
+  "dining": [
+    {
+      "name": "Sunset Bar",
+      "desc": "Quầy bar nổi biểu tượng của khách sạn, lý tưởng để ngắm hoàng hôn hồ Tây và thưởng thức cocktail sáng tạo."
+    },
+    {
+      "name": "Café du Lac",
+      "desc": "Không gian lấy cảm hứng Pháp, phục vụ buffet và thực đơn quốc tế cho bữa sáng, trưa và tối."
+    },
+    {
+      "name": "Milan Restaurant",
+      "desc": "Ẩm thực Ý truyền thống kết hợp phong cách phục vụ hiện đại cho trải nghiệm fine dining."
+    },
+    {
+      "name": "Saigon Restaurant",
+      "desc": "Hương vị Việt Nam đương đại, nhấn mạnh nguyên liệu địa phương và trải nghiệm bếp mở."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Khách sạn cách trung tâm Hà Nội bao xa?",
+      "a": "Khách sạn nằm tại số 5 Từ Hoa, quận Tây Hồ và chỉ mất vài phút di chuyển tới khu trung tâm bằng taxi."
+    },
+    {
+      "q": "Khách sạn có phù hợp cho sự kiện cưới và hội nghị không?",
+      "a": "Có. InterContinental Hanoi Westlake có không gian tiệc cưới, hội họp và dịch vụ tổ chức sự kiện chuyên nghiệp."
+    },
+    {
+      "q": "Làm sao để nhận ưu đãi tốt nhất?",
+      "a": "Bạn nên đặt trực tiếp qua website hoặc hotline để cập nhật ưu đãi theo mùa và các gói lưu trú độc quyền."
+    }
+  ],
+  "cta": {
+    "title": "Sẵn sàng cho kỳ nghỉ đẳng cấp bên hồ Tây?",
+    "body": "Liên hệ đội ngũ đặt phòng để được tư vấn gói phù hợp cho nghỉ dưỡng, công tác hoặc sự kiện riêng.",
+    "button": "Gọi +84 24 6270 8888"
+  }
+}
