@@ -1,35 +1,46 @@
-# InterContinental Hanoi Westlake – Modern SEO + AI-ready Rebuild
+# InterContinental Hanoi Westlake – Next.js multilingual rebuild
 
-## What was fixed for Vercel deployment
-- Removed fragile i18n middleware dependency chain and switched to a stable locale architecture (`/vi`, `/en`) with server-side redirect from `/`.
-- Downgraded to a widely stable stack for Vercel compatibility: Next.js 15 + React 18.
-- Fixed image host configuration for CloudFront assets from the original website.
-- Added static locale params and safe locale validation to avoid runtime route errors.
+## Quick start (local)
+```bash
+npm install
+npm run typecheck
+npm run build
+npm run start
+```
 
-## Implemented pages
-- `/vi`, `/en` (homepage)
-- `/vi/rooms`, `/en/rooms`
-- `/vi/dining`, `/en/dining`
-- `/vi/offers`, `/en/offers`
-- `/vi/contact`, `/en/contact`
+Open `http://localhost:3000`.
 
-## SEO implemented
-- Per-locale metadata and canonical/hreflang alternates
-- JSON-LD schema (`Hotel`, `FAQPage`)
-- `robots.txt`
-- `sitemap.xml` (all locale pages)
-- semantic heading hierarchy and internal linking
+## Deploy from GitHub to Vercel
+This repository includes:
+- `.github/workflows/ci.yml` (install + typecheck + build on push/PR)
+- `.github/workflows/deploy-vercel.yml` (production deploy on `main`/`master`)
 
-## Performance
-- Optimized Next/Image usage with AVIF/WebP support
-- Remote image allowlist for original media CDN
-- Lightweight component structure and route-level code splitting
+Required GitHub Action secrets:
+- `VERCEL_TOKEN`
+- `VERCEL_ORG_ID`
+- `VERCEL_PROJECT_ID`
 
-## Deployment (Vercel)
-1. `npm install`
-2. `npm run build`
-3. Push to GitHub
-4. Import repo in Vercel
-5. Deploy
+## Docker package (run immediately)
+Build image:
+```bash
+docker build -t ic-westlake-site .
+```
 
-> If your environment blocks npm registry access, run steps above on your local machine or CI with standard npm network access.
+Run:
+```bash
+docker run --rm -p 3000:3000 ic-westlake-site
+```
+
+Or with compose:
+```bash
+docker compose up --build
+```
+
+## Current architecture
+- Locale routes: `/vi`, `/en`
+- Pages: home, rooms, dining, offers, contact
+- SEO: metadata alternates, FAQ schema, sitemap, robots
+- Content model in `lib/site-content.ts`
+
+## Notes
+- If your environment blocks npm registry access, run installation/build in CI or on a machine with registry access.
