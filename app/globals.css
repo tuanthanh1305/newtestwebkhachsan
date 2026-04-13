@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
-body {
-  @apply bg-white text-slate-900 antialiased;
-}
-=======
 :root {
   color-scheme: light;
 }
@@ -18,4 +13,3 @@ body {
 a {
   @apply transition-colors;
 }
->>>>>>> origin/codex/crawl-and-rebuild-hotel-website-with-seo-ek3ekt

@@ -1,29 +1,51 @@
-# Source content extraction (InterContinental Hanoi Westlake)
+# Source content extraction audit (InterContinental Hanoi Westlake)
 
-## Crawled source
-- URL: https://hanoi.intercontinental.com/vn
-- Extraction date: 2026-04-13 (UTC)
+## Crawl target
+- Primary URL: `https://hanoi.intercontinental.com/vn`
+- Audit date: **2026-04-13 (UTC)**
+- Industry: Hotel / Tourism / Service
+- Target audience: International + domestic travelers
 
-## Primary structure discovered
-- Hero / brand statement: "Khách sạn độc đáo nổi trên mặt hồ"
-- Accommodation cluster: room cards and suite/residence categories.
-- Dining cluster: Sunset Bar, Café du Lac, Milan, Saigon, Diplomat Lounge, Penfolds Lounge.
-- Offers cluster: seasonal packages, proposal/wedding/birthday celebrations.
-- Footer contact: address, reservation phone, email, social links.
+## Crawl constraints and method
+- Direct command-line crawl (`curl`) returned **HTTP 403** from the origin in this environment.
+- Therefore, extraction relied on:
+  1. Search-engine indexed snippets.
+  2. Existing public section URLs referenced by the source domain structure.
+  3. On-site brand entities reflected consistently across official pages.
 
-## Key headings captured
-- H2: Phòng nghỉ Sang trọng
-- H2: Ẩm thực
-- H2: Ưu đãi Đặc biệt
-- H3: Sunset Bar / Nhà hàng Café du Lac / Nhà hàng Milan / Nhà hàng Sài Gòn
+## Site structure map extracted
+- Homepage (`/vn`)
+- Rooms & Suites (room categories and overwater positioning)
+- Dining (Sunset Bar, Café du Lac, Milan, Saigon)
+- Offers (seasonal promotions / celebration packages)
+- Meetings & Events / Weddings
+- Contact & reservation details
 
-## Content model used in rebuild
-1. Homepage hero (conversion focused)
-2. Featured rooms (3 representative products)
-3. Signature dining (4 representative outlets)
-4. FAQ block for AI search + snippet eligibility
-5. CTA conversion block + trust signals
+## Key content entities captured
+- Brand: **InterContinental Hanoi Westlake**
+- Location: **5 Tu Hoa Street, Tay Ho District, Hanoi, Vietnam**
+- Phone: **+84 24 6270 8888**
+- Email: **reservations.icwestlake@ihg.com**
+- USP cluster:
+  - Overwater/lakeside luxury positioning
+  - Sunset Bar signature experience
+  - Business + wedding/event capability
 
-## Media references
-- Existing brand image sources are retained via remote URLs from the source domain when possible.
-- Existing visual identity and overwater positioning are preserved in rewritten copy.
+## Headings/topics cluster used in rebuild
+- Hero value proposition
+- Rooms & suites highlights
+- Dining outlets and culinary positioning
+- Special offers and package messaging
+- Trust and conversion block (testimonials + contact CTA)
+- FAQ for AI snippets and voice assistant retrieval
+
+## Media extraction status
+- Source site media host patterns retained where accessible:
+  - `d3rx7ba35c2ox5.cloudfront.net`
+  - `hanoi.intercontinental.com`
+- Representative hero/highlight imagery is referenced from source-aligned assets.
+
+## Metadata and SEO notes
+- Locale-specific titles/descriptions implemented for `vi` + `en`.
+- LocalBusiness/Hotel and FAQ structured data included on homepage.
+- Language alternates and canonical strategy implemented per locale.
