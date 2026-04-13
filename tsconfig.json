@@ -1,7 +1,15 @@
 {
   "compilerOptions": {
     "target": "ES2022",
+<<<<<<< HEAD
     "lib": ["dom", "dom.iterable", "es2022"],
+=======
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es2022"
+    ],
+>>>>>>> origin/codex/crawl-and-rebuild-hotel-website-with-seo-ek3ekt
     "allowJs": false,
     "skipLibCheck": true,
     "strict": true,
@@ -10,6 +18,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
+<<<<<<< HEAD
     "jsx": "preserve",
     "incremental": true,
     "baseUrl": ".",
@@ -20,4 +29,31 @@
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
+=======
+    "jsx": "react-jsx",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "esModuleInterop": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+>>>>>>> origin/codex/crawl-and-rebuild-hotel-website-with-seo-ek3ekt
 }
