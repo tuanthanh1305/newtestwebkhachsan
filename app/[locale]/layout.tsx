@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import {notFound} from 'next/navigation';
-import {locales, type Locale} from '@/lib/i18n';
-=======
 import Link from 'next/link';
 import {notFound} from 'next/navigation';
 import {LanguageSwitcher} from '@/components/LanguageSwitcher';
@@ -11,7 +7,6 @@ import {getSiteContent} from '@/lib/site-content';
 export function generateStaticParams() {
   return locales.map((locale) => ({locale}));
 }
->>>>>>> origin/codex/crawl-and-rebuild-hotel-website-with-seo-ek3ekt
 
 export default async function LocaleLayout({
   children,
@@ -21,10 +16,6 @@ export default async function LocaleLayout({
   params: Promise<{locale: string}>;
 }) {
   const {locale} = await params;
-<<<<<<< HEAD
-  if (!locales.includes(locale as Locale)) notFound();
-  return children;
-=======
   if (!isLocale(locale)) notFound();
   const t = getSiteContent(locale as Locale);
 
@@ -53,5 +44,4 @@ export default async function LocaleLayout({
       </footer>
     </div>
   );
->>>>>>> origin/codex/crawl-and-rebuild-hotel-website-with-seo-ek3ekt
 }

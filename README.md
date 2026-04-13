@@ -1,55 +1,45 @@
-<<<<<<< HEAD
-# AI-first SEO Rebuild: InterContinental Hanoi Westlake (Bilingual)
+# InterContinental Hanoi Westlake — AI-first SEO Rebuild (Next.js + Vercel)
+
+Modern bilingual hotel website rebuilt with **Next.js App Router**, **TypeScript**, **Tailwind CSS**, and an **AI-ready content model** designed for Google SGE / AI Search discoverability.
 
 ## 1) Full source code
-This repo contains a Next.js 16 + TypeScript + Tailwind + App Router implementation with bilingual routing (`/vi`, `/en`) and AI-ready semantic content blocks.
+This repository includes:
+- Full multilingual web app source (`/vi`, `/en`).
+- Structured hotel content model for semantic SEO.
+- Rewritten marketing copy (Vietnamese + English) preserving source meaning.
+- AI-search friendly FAQ and JSON-LD schema.
 
 ## 2) Folder structure
 
-- `app/` — routes, layouts, metadata, sitemap, robots
-- `app/[locale]/` — locale homepage with schema + FAQ
-- `components/` — language switcher + auto-language redirect
-- `messages/` — Vietnamese/English content dictionaries
-- `docs/content-audit.md` — extraction and structure mapping
-- `docs/translation-architecture.md` — translation design diagram
+```txt
+app/
+  [locale]/
+    page.tsx                # Homepage (hero, highlights, FAQ, testimonials)
+    rooms/page.tsx          # Rooms
+    dining/page.tsx         # Dining
+    offers/page.tsx         # Offers
+    contact/page.tsx        # Contact + lead form UI
+    layout.tsx              # Locale nav/footer + language switch
+  layout.tsx                # Global metadata
+  page.tsx                  # Root language redirect
+  sitemap.ts                # SEO sitemap
+  robots.ts                 # SEO robots
+components/
+  LanguageSwitcher.tsx      # Client locale switching + preference persist
+  AutoLanguageRedirect.tsx  # Client-side preferred-language redirect
+lib/
+  i18n.ts                   # Locale helpers + accept-language detection
+  site-content.ts           # Bilingual SEO content model
+docs/
+  content-audit.md          # Source extraction map + crawl findings
+  translation-architecture.md
+middleware.ts               # Edge redirect for '/'
+next.config.ts              # Image optimization + standalone output
+```
 
 ## 3) Deploy to Vercel
-1. Install dependencies: `npm install`
-2. Build: `npm run build`
-3. Push to GitHub
-4. Import project in Vercel
-5. Set production domain and update `metadataBase` + sitemap domain
 
-## 4) SEO checklist (implemented)
-- [x] Per-locale title and meta description
-- [x] Canonical and hreflang alternates
-- [x] JSON-LD (Hotel + FAQPage)
-- [x] Robots.txt
-- [x] Sitemap.xml
-- [x] Semantic heading hierarchy (single H1)
-- [x] Internal conversion CTA sections
-
-## 5) Suggested improvements
-- Add dedicated pages: `/rooms`, `/dining`, `/weddings`, `/meetings`, `/contact`
-- Add CMS (Sanity/Contentful) for marketing team updates
-- Implement edge KV caching for AI dynamic translation mode
-- Add real testimonials + review schema
-
-## 6) Multilingual system explanation
-- Detect locale from saved preference first, then browser language.
-- Redirect to localized route without full reload using Next navigation.
-- Use static dictionaries for Vietnamese + English (SEO-safe).
-- Extend with runtime translation API for unsupported locales.
-
-## 7) Translation architecture diagram
-See: `docs/translation-architecture.md`.
-
-## Notes on source extraction
-Because the source site is content-rich and partially dynamic, this rebuild includes a practical extraction baseline from key homepage sections (hero, rooms, dining, offers/contact context), preserving original meaning while optimizing copy for readability and AI/SEO discoverability.
-=======
-# InterContinental Hanoi Westlake – Next.js multilingual rebuild
-
-## Quick start (local)
+### Local validation
 ```bash
 npm install
 npm run typecheck
@@ -57,40 +47,38 @@ npm run build
 npm run start
 ```
 
-Open `http://localhost:3000`.
+### Vercel deployment
+1. Push repository to GitHub/GitLab/Bitbucket.
+2. Import project into Vercel.
+3. Framework preset: **Next.js** (auto-detected).
+4. Build command: `npm run build`.
+5. Output: `.next` (default).
+6. Deploy.
 
-## Deploy from GitHub to Vercel
-This repository includes:
-- `.github/workflows/ci.yml` (install + typecheck + build on push/PR)
-- `.github/workflows/deploy-vercel.yml` (production deploy on `main`/`master`)
+## 4) SEO checklist (implemented)
+- [x] Per-locale metadata (`title`, `description`).
+- [x] Canonical + `hreflang` alternates on localized pages.
+- [x] Structured data (Hotel + FAQPage via JSON-LD).
+- [x] `sitemap.xml` with locale routes and key pages.
+- [x] `robots.txt` with sitemap declaration.
+- [x] Semantic heading hierarchy (one H1/page).
+- [x] Internal linking across Home / Rooms / Dining / Offers / Contact.
+- [x] Fast image delivery via Next `<Image>` with AVIF/WebP enabled.
 
-Required GitHub Action secrets:
-- `VERCEL_TOKEN`
-- `VERCEL_ORG_ID`
-- `VERCEL_PROJECT_ID`
+## 5) Suggested improvements
+- Add booking engine deep-link tracking (UTM + conversion events).
+- Connect real CMS (Sanity/Contentful/Strapi) for non-dev content updates.
+- Add Review/AggregateRating schema from verified first-party data.
+- Add server-side dynamic translation cache (Redis/Upstash) for non-vi/en locales.
+- Add E2E tests (Playwright) + Lighthouse CI budget gates.
 
-## Docker package (run immediately)
-Build image:
-```bash
-docker build -t ic-westlake-site .
-```
+## 6) Multilingual system explanation
+- **Mode 1 (SEO-safe):** pre-generated static content in Vietnamese and English.
+- **Language detection:**
+  - Edge (`middleware.ts`): detects `Accept-Language` and redirects `/` to `/vi` or `/en`.
+  - Client (`AutoLanguageRedirect`): honors saved `preferred-language` from localStorage.
+- **Language switcher:** updates URL and persists language preference.
+- **Routing strategy:** clean locale prefixes (`/vi`, `/en`) suitable for SEO + hreflang.
 
-Run:
-```bash
-docker run --rm -p 3000:3000 ic-westlake-site
-```
-
-Or with compose:
-```bash
-docker compose up --build
-```
-
-## Current architecture
-- Locale routes: `/vi`, `/en`
-- Pages: home, rooms, dining, offers, contact
-- SEO: metadata alternates, FAQ schema, sitemap, robots
-- Content model in `lib/site-content.ts`
-
-## Notes
-- If your environment blocks npm registry access, run installation/build in CI or on a machine with registry access.
->>>>>>> origin/codex/crawl-and-rebuild-hotel-website-with-seo-ek3ekt
+## 7) Translation architecture diagram
+See `docs/translation-architecture.md`.
